@@ -16,6 +16,7 @@ export const childRoutes = [
     },
     {
         path: 'charts',
+        loadChildren: () => import('./charts/charts.module').then(m => m.ChartsModule),
         data: {
             icon: 'bar_chart',
             text: 'Charts'
